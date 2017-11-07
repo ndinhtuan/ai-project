@@ -24,7 +24,13 @@ class Frame {
     // Need to check parse data for vertices BEFORE calculae angles
     void calcAngle();
     friend ostream& operator<<(ostream &os, const Frame&);
-
+    // Lấy giá trị của numVertices
+    int getNumVertices() const{
+      return this->numVertices;
+    }
+    Dot** getVertices() const {
+      return this->vertices;
+    }
   protected:
     float *angles;
     Dot **vertices;
