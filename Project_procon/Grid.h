@@ -2,7 +2,7 @@
 - Class Grid tạo class để mô phỏng Piece và Frame trên Opencv
 */
 
-#ifndef GRID_H 
+#ifndef GRID_H
 #define GRID_H
 
 #include "opencv2/core/core.hpp"
@@ -14,9 +14,10 @@ using namespace cv;
 
 #include "Frame.h"
 
-class Grid {
+class Grid
+{
 
-public:
+  public:
     Grid();
     /*
     - Khởi tạo Grid với 
@@ -28,8 +29,9 @@ public:
     ~Grid();
 
     void showPiece(const Frame *frame);
-    friend ostream& operator<<(ostream &os, const Grid &grid);
-private:
+    friend ostream &operator<<(ostream &os, const Grid &grid);
+
+  private:
     Mat *grid;
     int height, width, step;
 };
